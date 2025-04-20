@@ -18,5 +18,5 @@ phases:
       - echo "Uploading to s3 Location"
       - aws s3 cp deployment_package.zip s3://lambda-builds-zip-folder/
       - echo "updating lambda function via s3 bucket"
-      - aws lambda update-function-code --funtion-name  lambda-assign3 --s3-bucket lambda-builds-zip-folder --s3-key deployment_package.zip
+      - aws lambda update-function-code --function-name lambda-assign3 --s3-bucket lambda-builds-zip-folder --s3-key deployment_package.zip
       - echo "Deployment Done successfully!!!"
